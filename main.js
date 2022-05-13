@@ -1,4 +1,5 @@
 function setup(){
+   console.log("Hello world");
    createCanvas(800,600);
    createGrid();
 }
