@@ -8,6 +8,7 @@ let tileMapTileSize = 4;
 function download(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    console.log(encodeURIComponent(text));
     element.setAttribute('download', filename);
 
     element.style.display = 'none';
@@ -62,11 +63,11 @@ function setTileType(x, y) {
     }
 }
 
-function mousePressed() {
+function TileEditor_mousePressed() {
     setTileType(mouseX, mouseY);
 }
 
-function keyPressed() {
+function TileEditor_keyPressed() {
     if (key == 1) {
         typeSelected = 0;
     } else if (key == 2) {
